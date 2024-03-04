@@ -1,0 +1,26 @@
+{
+  "name": "guidoexge/BarcodeFPDF",
+  "homepage": "https://github.com/guidoexge/BarcodeFPDF",
+  "description": "FPDF Barcode support for Code 39",
+  "type": "library",
+  "keywords": [
+    "pdf",
+    "fpdf",
+    "barcode",
+    "code39",
+  ],
+  "license": "Unlicense",
+  "authors": [
+    {
+      "name": "Guido Valle"
+    }
+  ],
+  "require": {
+    "setasign/fpdf": "^1.8"
+  },
+  "autoload": {
+    "psr-4": {
+      "guidoexge\\BarcodeFPDF\\": "src/"
+    }
+  }
+}
