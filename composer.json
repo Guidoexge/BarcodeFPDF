@@ -7,7 +7,7 @@
     "pdf",
     "fpdf",
     "barcode",
-    "code39",
+    "code39"
   ],
   "license": "Unlicense",
   "authors": [
