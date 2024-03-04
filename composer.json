@@ -20,7 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Guidoexge\\BarcodeFPDF\\": "src/"
+      "guidoexge\\barcodefpdf\\": "src/"
     }
   }
 }
