@@ -4,7 +4,7 @@ namespace Guidoexge\Barcode\FPDF;
 
 use \FPDF;
 
-class BarcodeFPDF  extends FPDF
+class BarcodeFPDF extends FPDF
 {
     /** @var array */
     protected $barcodes;
