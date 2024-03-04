@@ -1,5 +1,5 @@
 {
-  "name": "guidoexge/barcodefpdf",
+  "name": "guidoexge/BarcodeFPDF",
   "homepage": "https://github.com/guidoexge/BarcodeFPDF",
   "description": "FPDF Barcode support for Code 39",
   "type": "library",
@@ -20,7 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-      "guidoexge\\BarcodeFPDF\\": "src/"
+      "guidoexge\\barcodefpdf\\": "src/"
     }
   }
 }
