@@ -1,6 +1,6 @@
 <?php
 
-namespace guidoexge\BarcodeFPDF ;
+namespace Guidoexge\Barcode\FPDF;
 
 use \FPDF;
 
