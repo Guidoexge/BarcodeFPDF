@@ -8,7 +8,8 @@ class Barcode_FPDF extends FPDF
 {
     /** @var array */
     protected $barcodes;
-
+	protected $chars;
+	 
     public function __construct($orientation='P', $unit='mm', $size='A4')
     {
         $this->barcodes = array();
