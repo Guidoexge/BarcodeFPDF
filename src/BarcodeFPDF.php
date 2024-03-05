@@ -30,7 +30,7 @@ class Barcode_FPDF extends FPDF
   	 * @param char   $codeOrientation	Orientatio of the codebar (L landscape. P portrait)
      */
 
-    public function code39($x, $y, $code, $width=0.4, $height = 20.0, $isWide = false, $extended = true, $needChecksum = false, $displayText = false, $fontData = array('Arial','',8), $textDirection = "R" , $codeOrientationation = "L")
+    public function code39($x, $y, $code, $width=0.4, $height = 20.0, $isWide = false, $extended = true, $needChecksum = false, $displayText = false, $fontData = array('Arial','',8), $textDirection = "R" , $codeOrientation = "L")
     {
         if ($displayText) {
             //Display code
@@ -173,7 +173,7 @@ class Barcode_FPDF extends FPDF
 			}else{
 				$wNew = $w;
 			}
-			$this->Text($x+36, $y+1 , "-".$wNew);
+	//		$this->Text($x+36, $y+1 , "-".$wNew);
 			if($wNew*strlen($code)>=$pageWid - $x){
 				$wNew = ($pageWid - ($x+2))/$codeLenght ;
 				$flagRid = true;
@@ -199,7 +199,7 @@ class Barcode_FPDF extends FPDF
 			}
 		}
 		
-$this->Text($x+38, $y , "+".$wNew+$codeOrientation);
+//$this->Text($x+38, $y , "+".$wNew+$codeOrientation);
 
 		$posAtt = ($codeOrientation == "L")?$x:$y;
         for ($i = 0; $i < $codeLenght; $i++) {
