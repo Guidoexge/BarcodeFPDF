@@ -35,7 +35,7 @@ class Barcode_FPDF extends FPDF
         if ($displayText) {
             //Display code
            $this->SetFont($fontData[0], $fontData[1], $fontData[2]);
-           $this->fpdf->TextWithDirection($x, $y+$height+1.5 , $code, $textDirection );
+           $this->TextWithDirection($x, $y+$height+1.5 , $code, $textDirection );
         }
 
         //Conversion tables
@@ -53,7 +53,7 @@ class Barcode_FPDF extends FPDF
             $code = strtoupper($code);
             //Check validity
             if (!preg_match('|^[0-9A-Z. $/+%-]*$|', $code)) {
-                $this->fpdf->Error('Invalid barcode value: '.$code);
+                $this->Error('Invalid barcode value: '.$code);
             }
         }
 
@@ -144,7 +144,7 @@ class Barcode_FPDF extends FPDF
         $code_ext = '';
         for ($i = 0; $i < strlen($code); $i++) {
             if (ord($code[$i]) > 127) {
-                $this->fpdf->Error('Invalid character: '.$code[$i]);
+                $this->Error('Invalid character: '.$code[$i]);
             }
             $code_ext .= $encode[$code[$i]];
         }
@@ -157,7 +157,7 @@ class Barcode_FPDF extends FPDF
         $flagRid = false;
         $codeLenght = strlen($code);
 		if($codeOrientation == "L"){
-			$pageWid = $this->fpdf->GetPageWidth();
+			$pageWid = $this->GetPageWidth();
 			if($w<0){
 				// Se $w è un numero negativo intero, imposta $r a 2
 				if ($w == floor($w)) {
@@ -179,7 +179,7 @@ class Barcode_FPDF extends FPDF
 				$flagRid = true;
 			}
 		}else{
-			$pageHei = $this->fpdf->GetPageHeight();
+			$pageHei = $this->GetPageHeight();
 			if($w<0){
 				if ($y == floor($w)) {
 					$r = 2;
@@ -204,9 +204,9 @@ class Barcode_FPDF extends FPDF
             if ($code[$i] == '1') {
             	if($codeOrientation == "L"){
 					// orizzontale
-					$this->fpdf->Rect($posAtt , $y, $wNew, $h, 'F');
+					$this->Rect($posAtt , $y, $wNew, $h, 'F');
 				}else{
-					$this->fpdf->Rect($x , $posAtt, $h, $wNew, 'F');
+					$this->Rect($x , $posAtt, $h, $wNew, 'F');
 				}
             }
     		$posAtt += $wNew ;
@@ -214,9 +214,9 @@ class Barcode_FPDF extends FPDF
 		if($flagRid){
 			if($codeOrientation == "L"){
 				// orizzontale
-				$this->fpdf->Text($x+($wNew*$codeLenght) , $y , "*");
+				$this->Text($x+($wNew*$codeLenght) , $y , "*");
 			}else{
-				$this->fpdf->Text($x , $y +($wNew*$codeLenght)+1.5 , "*");
+				$this->Text($x , $y +($wNew*$codeLenght)+1.5 , "*");
 			}
         }
     }
