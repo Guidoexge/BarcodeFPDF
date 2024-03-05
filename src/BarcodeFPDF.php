@@ -39,7 +39,7 @@ class Barcode_FPDF extends FPDF
         }
 
         //Conversion tables
-        if ($wide) {
+        if ($isWide) {
             $this->initWide();
         } else {
             $this->initNarrow();
