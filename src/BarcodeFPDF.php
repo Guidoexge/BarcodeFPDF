@@ -1,8 +1,8 @@
 <?php
 
-namespace Guidoexge\Fpdf\Barcode;
+//namespace Guidoexge\Fpdf\Barcode;
 
-use \FPDF;
+//use \FPDF;
 
 class Barcode_FPDF extends FPDF
 {
