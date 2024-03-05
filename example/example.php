@@ -1,6 +1,6 @@
 <?php
 
-require_once '\htdocs\wwwatb\vendor\autoload.php';
+require_once '\..\..\vendor\autoload.php';
 
 $pdf = new Barcode_FPDF ('L','mm','A5');
 
@@ -9,7 +9,7 @@ $pdf = new Barcode_FPDF ('L','mm','A5');
 	$pdf->SetFont('Arial', 'B', 10);
 	$pdf->Cell(17,2,"Code",0,0,'L');
 	$codice_barre = "Testo da codificare" ;
-	$filename = 'd:\htdocs\wwwatb\samplepdfs\prova.pdf';
+	$filename = 'prova.pdf';
 //  code39($x, $y, $code, $width=0.4, $height = 20.0, $isWide = false, $extended = true, $needChecksum = false, $displayText = false)
 	$x = 2;
 	$y = 18;
@@ -19,7 +19,7 @@ $pdf = new Barcode_FPDF ('L','mm','A5');
  	$pdf->code39($x, $y,$codice_barre,$width,$height,false,false,false,true, $fontData , "R", "L");
 	$x = 45;
 	$y = 18;	
- 	$pdf->code39($x, $y,$codice_barre,$width,$height,false,false,false,true, $fontData , "R", "P");
+ 	$pdf->code39($x, $y,$codice_barre,$width,$height,false,false,false,true, $fontData , "U", "P");
 
 	$pdf->SetFont('Arial', '', 5);
 	$pdf->SetXY(8,24);
