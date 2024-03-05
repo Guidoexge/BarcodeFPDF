@@ -1,14 +1,16 @@
 <?php
 
-require_once __DIR__ . '/../vendor/autoload.php';
+require_once '\htdocs\wwwatb\vendor\autoload.php';
 
 $pdf = new Barcode_FPDF ('L','mm',array(25,44));
 
 	$pdf->AddPage();
 	$pdf->SetAutoPageBreak(0,1);
-	$pdf->SetFont('Arial', 'B', $carattere_testo_fisso);
+	$pdf->SetFont('Arial', 'B', 10);
 	$pdf->Cell(17,2,"Sit Code",0,0,'L');
-//    public function code39($x, $y, $code, $width=0.4, $height = 20.0, $isWide = false, $extended = true, $needChecksum = false, $displayText = false)
+	$codice_barre = "Testo da codicficare" ;
+	$filename = 'd:\htdocs\wwwatb\samplepdfs\prova.pdf';
+//  code39($x, $y, $code, $width=0.4, $height = 20.0, $isWide = false, $extended = true, $needChecksum = false, $displayText = false)
 	$x = 2;
 	$y = 18;
 	$width = 0.1;
