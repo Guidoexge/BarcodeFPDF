@@ -197,6 +197,8 @@ class Barcode_FPDF extends FPDF
 				$flagRid = true;
 			}
 		}
+		
+$this->Text($x+40, $y , "+".$wNew);
 
 		$posAtt = ($codeOrientation == "L")?$x:$y;
         for ($i = 0; $i < $codeLenght; $i++) {
