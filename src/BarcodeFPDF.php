@@ -173,6 +173,7 @@ class Barcode_FPDF extends FPDF
 			}else{
 				$wNew = $w;
 			}
+			$this->Text($x+34, $y , "-".$wNew);
 			if($wNew*strlen($code)>=$pageWid - $x){
 				$wNew = ($pageWid - ($x+2))/$codeLenght ;
 				$flagRid = true;
@@ -215,7 +216,7 @@ $this->Text($x+40, $y , "+".$wNew);
 		if($flagRid){
 			if($codeOrientation == "L"){
 				// orizzontale
-				$this->Text($x+($wNew*$codeLenght) , $y , "*".$wNew);
+				$this->Text($x+($wNew*$codeLenght) , $y , "*");
 			}else{
 				$this->Text($x , $y +($wNew*$codeLenght)+1.5 , "*");
 			}
