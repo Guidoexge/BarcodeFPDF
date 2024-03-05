@@ -31,7 +31,7 @@ class Barcode_FPDF extends FPDF
   	 * @param char   $codeOrientation	Orientatio of the codebar (L landscape. P portrait)
      */
 
-    public function code39($x, $y, $code, $width=0.4, $height = 20.0, $isWide = false, $extended = true, $needChecksum = false, $displayText = false, $fontData = array('Arial','',8), $textDirection = "R" , $codeOrientation = "L")
+    public function code39($x, $y, $code, $width=0.4, $height = 20.0, $isWide = false, $extendedEncoding = true, $needChecksum = false, $displayText = false, $fontData = array('Arial','',8), $textDirection = "R" , $codeOrientation = "L")
     {
         if ($displayText) {
             //Display code
@@ -59,7 +59,7 @@ class Barcode_FPDF extends FPDF
         }
 
         //Compute checksum
-        if ($addChecksum) {
+        if ($needChecksum) {
             $code .= $this->checksum_code39($code);
         }
 
