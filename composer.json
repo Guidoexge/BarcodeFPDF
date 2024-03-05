@@ -18,9 +18,9 @@
   "require": {
     "setasign/fpdf": "^1.8"
   },
-  "autoload": {
-    "psr-4": {
-      "guidoexge\\barcodefpdf\\": "src/"
+      "autoload": {
+        "classmap": [
+            "barcodeFPDF.php"
+        ]
     }
-  }
 }
