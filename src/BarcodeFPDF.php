@@ -34,7 +34,7 @@ class Barcode_FPDF extends FPDF
     {
         if ($displayText) {
             //Display code
-            $this->fpdf->SetFont($fontData[0], $fontData[1], $fontData[2]);
+           $this->SetFont($fontData[0], $fontData[1], $fontData[2]);
            $this->fpdf->TextWithDirection($x, $y+$height+1.5 , $code, $textDirection );
         }
 
